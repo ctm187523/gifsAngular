@@ -1,0 +1,5 @@
+#sidebar {
+    /* ocupa el 100 por cien del dispositivo de alto con height: 100vh*/
+    height: 100vh; 
+    width: 250px;
+}
