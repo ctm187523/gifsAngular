@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { GifsModule } from './gifs/gifs.module';
 import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule, //importamos HttpClientModule para hacer los endpoints
+
     //importamos los modulos creados con -> ng g m gifs y ng g m shared
     GifsModule,
     SharedModule
