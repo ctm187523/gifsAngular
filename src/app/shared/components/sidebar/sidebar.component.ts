@@ -18,10 +18,11 @@ export class SidebarComponent {
   //no podemos usar una variable public tags: string[] = this.gisfService.tagsHistory; solo funciona
   //si el array ya tiene los elementos, es fijo, para este caso hay que crear un metodo getter y usarlo
   //en el componente sidebar.component.html
-  get tags() {
+  get tags(): string[] {
     return this.gisfService.tagsHistory;
   }
 
- 
-
+  searchTag(tag: string){
+    this.gisfService.searchTag(tag);
+  }
 }

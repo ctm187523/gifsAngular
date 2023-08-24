@@ -4,9 +4,9 @@ import { GifsService } from '../../services/gifs.service';
 
 @Component({
     selector: 'gifs-search-box',
-    // creamos el html en el template directamente entre bag tips ``
+    // creamos el html en el template directamente entre backtips ``
     //usamos el siguiente codigo:
-    //    (keyup)="searchTag( txtTagInput.value)"
+    //    (keyup.enter)="searchTag()"
     //    #txtTagInput
     //para no tener que importar el formsModule para tener acceso al ngModel(banana in box)
     //usamos una referencia local #txtTagInput (el nombre se lo ponemos nosotros)

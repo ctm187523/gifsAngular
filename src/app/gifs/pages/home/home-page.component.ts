@@ -12,6 +12,7 @@ export class HomePageComponent {
   constructor( private gifsService: GifsService) {}
 
   //creamos un metodo get que retornara el arreglo de gifs tipado con la interfaz creada en app/gifs/interfaces
+  //creamos un metodo get para que sea dinamico
   get gifs(): Gif[] {
     
     return this.gifsService.gifList;

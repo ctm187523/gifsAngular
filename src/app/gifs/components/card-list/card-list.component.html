@@ -1,25 +1,12 @@
 <div class="row">
 
-    <!-- en pantallas medianas tiene 3 posiciones en pequeñas tiene 6 posiciones el total son 12 en bootstrap-->
-    <div *ngFor="let gif of gifs" class="col-md-3 col-sm-6">
-
-        <div class="card mb-2 text-center bg-dark">
-
-            <!-- ponemos src y alt entre corchetes porque es una expresion de javascript, hacemos el binding -->
-            <img 
-              [src]="gif.images.downsized_medium.url" 
-              [alt]="gif.title"
-              class="card-img-top"
-              >
-
-
-            <div class="card-body text-white">
-                <p class="card-text">
-                    {{ gif.title}}
-                </p>
-            </div>
-        </div>
-    </div>
-
+    <!-- llamamos al componente gifs-card y le pasamos los atributos
+    en el componenente hacemos el bucle for y cada uno de los gif 
+    se renderiza en el componente gifs-card -->
+    <gifs-card
+        *ngFor="let gif of gifs"
+        [gif]="gif"
+        class="col-md-3 col-sm-6"
+    ></gifs-card>
 
 </div>
